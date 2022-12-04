@@ -14,7 +14,7 @@
       {% csrf_token %}
 
 
-      <div class="form-row">
+				<div class="form-row">
 					<div class="col form-group">
 						<label>First name</label>
 					  	{{ form.first_name }}
@@ -24,7 +24,6 @@
 					  	{{ form.last_name }}
 					</div> <!-- form-group end.// -->
 				</div> <!-- form-row end.// -->
-
 
 
 				<div class="form-row">
@@ -45,13 +44,13 @@
 					<div class="form-group col-md-6">
 						<label>Repeat password</label>
             {{form.confirm_password}}
-          </div> <!-- form-group end.// -->
-      </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block"> Register  </button>
-        </div> <!-- form-group// -->
-    {{ form.email.errors }}
-
+					</div> <!-- form-group end.// -->
+				</div>
+			    <div class="form-group">
+			        <button type="submit" class="btn btn-primary btn-block"> Register  </button>
+			    </div> <!-- form-group// -->
+      {{ form.email.errors }}
+      {{ form.non_field_errors }}
 			</form>
 		</article><!-- card-body.// -->
     </div> <!-- card .// -->
